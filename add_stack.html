@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <title>Stack</title>
+
+</head>
+
+<body>
+
+  <input type="text" id="a2"><br>
+
+  <input type="button" value="PUSH" onclick="pushVal()">
+
+  <input type="button" value="POP" onclick="popVal()"><br>
+
+  <textarea id="a3" rows="3" cols="15"></textarea><br>
+
+  <script>
+
+    let arr = new Array()
+
+    function pushVal() {
+
+      let v = document.getElementById("a2").value;
+
+      arr.push(v);
+
+      document.getElementById('a3').value = arr; 
+      document.getElementById('a2').value="";
+    }
+
+    function popVal() {
+
+      let v = document.getElementById("a2").value;
+
+      if (arr.length == 0) {
+
+        alert("Stack Underflow!!!")
+
+      }
+
+      arr.pop(v);
+
+      document.getElementById('a3').value = arr; 
+      document.getElementById('a2').value = "";
+    }
+
+  </script>
+
+</body>
+
+</html>

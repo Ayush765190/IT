@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    IMAGE MOVE
+  </title>
+  <style type="text/css">
+    button {
+      background-color: black;
+      color: white;
+      padding: 8px;
+    }
+
+    .button {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <img src="https://img.freepik.com/premium-photo/single-white-flower-with-green-stem_1021856-8532.jpg?w=360" id="i1">
+  <div class="button">
+    <button id="start" onclick="begin()">START</button>
+    <button id="stop" onclick="stop()">STOP</button>
+    <button id="reset" onclick="reset()">RESET</button>
+  </div>
+  <script type="text/javascript">
+    var a = document.getElementById('start');
+    var b = document.getElementById('stop');
+    var c = document.getElementById('reset');
+    var image = document.getElementById('i1');
+    var margin = 0;
+    var interval;
+    function begin() {
+      clearInterval(interval);
+      interval = setInterval(function () {
+        if (margin >= window.innerWidth - image.width) {
+          margin = 0;
+        }
+        image.style.marginLeft = margin + "px";
+        margin += 5;
+      }, 10);
+    }
+    function stop() {
+      clearInterval(interval);
+    }
+    function reset() {
+      clearInterval(interval);
+      margin = 0;
+      image.style.marginLeft = margin + "px";
+    }
+  </script>
+</body>
+
+</html>

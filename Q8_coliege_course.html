@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>B.Sc. Hons CS Course</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    .btn {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>B.Sc. Hons CS Course</h1>
+    <h2>My course detail</h2>
+    <p><strong>Degree:</strong> Bachelors</p>
+    <p><strong>Duration:</strong> 3 years</p>
+    <p><strong>Average Salary:</strong> 4-6 LPA</p>
+    <p><strong>Eligibility:</strong> 10+2</p>
+    <p><strong>Employment Roles:</strong> Full Stack Developer, Software Engineer, Business Analyst, Data Scientist, etc.</p>
+    <h2>Subjects Semester Wise</h2>
+    <ul>
+      <li><strong>Semester 1:</strong> Programming with C++(credit - 6), Computer Architecture(credit - 6), Evs(credit - 4),GE_economics(credit - 6)</li>
+      <li><strong>Semester 2:</strong> java(credit - 6), data structure(credit - 6), english(credit - 4)</li>
+      <!-- Add more semesters and subjects as needed -->
+    </ul>
+    <h2>Future Possibilities</h2>
+    <p>You can persue for higher education as well .</p>
+    <button class="btn" id="styleButton">Style Page</button>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $('#styleButton').on('click', function() {
+      $('.container').css({
+        'background-color': '#e9e9e9',
+        'color': '#444',
+        'box-shadow': '0 0 15px rgba(0, 0, 0, 0.2)',
+        'padding': '30px',
+        'border-radius': '10px',
+        'max-width': '800px',
+        'margin': '20px auto',
+        'font-family': 'Verdana, sans-serif'
+      });
+      $('h1').css({
+        'text-align': 'center',
+        'color': '#007bff'
+      });
+      $('.btn').css({
+        'background-color': '#444',
+        'color': '#fff'
+      });
+    });
+  </script>
+
+</body>
+</html>

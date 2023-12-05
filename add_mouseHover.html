@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+
+  <title>Mouse Event</title>
+
+  <style type="text/css">
+    img {
+
+      width: 200px;
+
+      height: 200px;
+
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Mouse Hover</h1>
+
+  <img id="event-img" src="https://images.pexels.com/photos/19105510/pexels-photo-19105510/free-photo-of-man-lying-down-on-wooden-footpath.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+  <script type="text/javascript">
+
+    var image = document.getElementById('event-img');
+    image.addEventListener('mouseenter', () => {
+      image.style.width = "400px";
+
+      image.style.height = "400px";
+
+      image.addEventListener('mouseleave', () => { image.style.width = "200px"; image.style.height = "200px"; });
+    });
+  </script>
+
+</body>
+
+</html>

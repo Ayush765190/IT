@@ -1,0 +1,31 @@
+[
+  {
+    "name":"Dobby",
+    "age":10,
+    "weight":7,
+    "type":"dog","likes":"chiken"
+  },
+  {
+    "name":"pikachu","age":7,"weight":4,"type":"cat","likes":"milk"
+  },
+  {
+    "name":"koyaliya",
+    "age":6,
+    "weight":2,
+    "type":"bird",
+    "likes":"dana"
+  },
+  {
+  "name":"dolu",
+  "age":7,"weight":3,
+  "type":"dog",
+  "likes":"playing with me"
+  },
+  {
+    "name":"totta",
+  "age":6,
+  "weight":1.5,
+  "type":"bird",
+  "likes":"Azad Ghoomna"
+  }
+]

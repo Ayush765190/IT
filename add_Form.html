@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Detailed Form</title>
+</head>
+<body>
+
+  <h1>Personal Information</h1>
+  
+  <form>
+    <fieldset>
+      <legend>Basic Information</legend>
+      <label for="fullName">Full Name:</label><br>
+      <input type="text" id="fullName" name="fullName" required><br><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="phone">Phone Number:</label><br>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br><br>
+
+      <label for="dob">Date of Birth:</label><br>
+      <input type="date" id="dob" name="dob" required><br><br>
+
+      <label for="gender">Gender:</label><br>
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Female</label><br><br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Address Information</legend>
+      <label for="address">Address:</label><br>
+      <textarea id="address" name="address" rows="4" cols="30" required></textarea><br><br>
+
+      <label for="city">City:</label><br>
+      <input type="text" id="city" name="city" required><br><br>
+
+      <label for="state">State:</label><br>
+      <input type="text" id="state" name="state" required><br><br>
+
+      <label for="zipcode">Zip Code:</label><br>
+      <input type="text" id="zipcode" name="zipcode" pattern="[0-9]{5}" required><br><br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Educational Information</legend>
+      <label for="school">School/College Name:</label><br>
+      <input type="text" id="school" name="school" required><br><br>
+
+      <label for="course">Course:</label><br>
+      <select id="course" name="course" required>
+        <option value="bachelor">Bachelor's</option>
+        <option value="master">Master's</option>
+        <option value="phd">PhD</option>
+      </select><br><br>
+
+      <label for="interests">Interests/Hobbies:</label><br>
+      <input type="text" id="interests" name="interests"><br><br>
+    </fieldset>
+
+    <input type="submit" value="Submit">
+  </form>
+
+</body>
+</html>

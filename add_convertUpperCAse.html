@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upper Case</title>
+</head>
+
+<body>
+
+  Text:
+
+  <input type="text" id="a1" onkeyup="up()" onclick="remText()">
+
+  <script>
+
+    function up() {
+
+      var a = document.getElementById('a1').value;
+
+      var u = a.toUpperCase()
+
+      document.getElementById("a1").value = u;
+
+    }
+
+    function remText() {
+
+      document.getElementById('a1').value = ""; 
+    }
+
+  </script>
+
+</body>
+
+</html>

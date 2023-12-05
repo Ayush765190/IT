@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Multiplication Tables</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f4f4;
+    }
+  </style>
+</head>
+<body>
+
+  <script>
+    let multiplier = 2;
+    let fontSize = 16;
+    let colorIndex = 0;
+    const colors = ['#FF6633', '#FFB399', '#FF33FF', '#FFFF99', '#00B3E6',
+                   '#E6B333', '#3366E6', '#999966', '#99FF99', '#B34D4D'];
+
+    function displayTable() {
+      if (multiplier > 10) return;
+
+      let tableRow = document.createElement('div');
+      tableRow.style.fontSize = `${fontSize}px`;
+      tableRow.style.color = colors[colorIndex];
+      colorIndex = (colorIndex + 1) % colors.length;
+
+      for (let i = 1; i <= 10; i++) {
+        let result = multiplier * i;
+        let tableData = document.createElement('span');
+        tableData.textContent = `${multiplier} x ${i} = ${result}, `;
+        tableRow.appendChild(tableData);
+      }
+
+      document.body.appendChild(tableRow);
+      document.body.appendChild(document.createElement('br'));
+
+      fontSize += 2;
+      multiplier++;
+
+      if (multiplier > 10) clearInterval(intervalId);
+    }
+
+    const intervalId = setInterval(displayTable, 5000);
+  </script>
+
+</body>
+</html>

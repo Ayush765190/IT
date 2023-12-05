@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pets Information</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    #petsContainer {
+      max-width: 600px;
+      width: 100%;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    .pet {
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+    }
+    .pet:last-child {
+      border-bottom: none;
+    }
+    .pet h3 {
+      margin: 5px 0;
+      font-size: 24px;
+      color: #333;
+    }
+    .pet p {
+      margin: 5px 0;
+      font-size: 16px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="petsContainer"></div>
+
+  <script>
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        const petsData = JSON.parse(xhr.responseText);
+        displayPets(petsData);
+      }
+    };
+    xhr.open('GET', 'prevPET_DATA.json', true);
+    xhr.send();
+
+    function displayPets(pets) {
+      const petsContainer = document.getElementById('petsContainer');
+      pets.forEach(pet => {
+        const petDiv = document.createElement('div');
+        petDiv.classList.add('pet');
+
+        const petName = document.createElement('h3');
+        petName.textContent = pet.name;
+
+        const petInfo = document.createElement('p');
+        petInfo.textContent = `Type: ${pet.type}, Age: ${pet.age}, Weight: ${pet.weight} kg, Likes: ${pet.likes}`;
+
+        petDiv.appendChild(petName);
+        petDiv.appendChild(petInfo);
+        petsContainer.appendChild(petDiv);
+      });
+    }
+  </script>
+
+</body>
+</html>
